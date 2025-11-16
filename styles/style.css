@@ -208,6 +208,7 @@
 
 .card__like-button::before,
 .footer__button::before {
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -234,7 +235,8 @@
   cursor: pointer;
 }
 
-.card__like-button .button__text {
+.card__like-button .button__text,
+.footer__button .button__text {
   position: relative;
   z-index: 2;
   color: var(--main-color);
@@ -242,11 +244,14 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease-in-out;
 }
 
-.card__like-button:hover .button__text {
-  color: var(--background-color);
+.card__like-button:hover .button__text,
+.card__like-button:focus .button__text,
+.footer__button:hover .button__text,
+.footer__button:focus .button__text {
+  color: var(--button-text-color);
 }
 
 .button__text {
@@ -257,20 +262,13 @@
   color: var(--button-text-color);
 }
 
-.button .button__text {
-  transition: color 0.5s ease-in-out;
-}
-
-.button:hover .button__text {
-  color: var(--background-color);
-}
-
 .button svg {
   transition: color 0.5s ease-in-out;
 }
 
-.button:hover svg {
-  color: var(--background-color);
+.button:hover svg,
+.button:focus svg {
+  color: var(--button-text-color);
 }
 
 dialog::backdrop {
@@ -316,6 +314,7 @@ dialog::backdrop {
   color: var(--main-color);
 }
 
+/* Фильтры изображений */
 .image_blur {
   filter: var(--filter-blur);
 }
@@ -351,10 +350,6 @@ dialog::backdrop {
   overflow: hidden;
 }
 
-.footer__button .button__text {
-  color: var(--main-color);
-}
-
 @media (width <= 375px) {
   .page {
     width: 100%;
@@ -376,7 +371,6 @@ dialog::backdrop {
   }
 
   dialog[open] {
-    /* применяется к dialog толкьо когда открыт в окне */
     display: flex;
     flex-direction: column;
     justify-content: center;
