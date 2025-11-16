@@ -367,10 +367,19 @@ dialog::backdrop {
 
   .footer__button {
     flex-direction: column;
+    gap: 8px;
   }
 
   .footer__button svg {
     width: 28px;
     height: 28px;
+  }
+
+  dialog[open] {
+    /* применяется к dialog толкьо когда открыт в окне */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

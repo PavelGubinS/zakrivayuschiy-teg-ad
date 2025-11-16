@@ -1,14 +1,3 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 @keyframes like-zoom {
   0% {
     scale: 1;
@@ -23,9 +12,11 @@
 
 @keyframes like-sparks {
   from {
+    opacity: 0;
     fill: transparent;
   }
   to {
+    opacity: 1;
     fill: var(--accent-color);
   }
 }
@@ -35,8 +26,23 @@
   transition: fill 0.3s var(--like-transition-delay) linear;
 }
 
-.like-icon:hover {
-  fill: var(--text-color);
+.like-icon .core,
+.like-icon .main-body {
+  transition: fill 0.3s ease;
+}
+
+.like-icon .main-body {
+  transition-delay: 0.05s;
+}
+
+.like-icon:hover .core,
+.like-icon:active .core {
+  fill: var(--accent-color);
+}
+
+.like-icon:hover .main-body,
+.like-icon:active .main-body {
+  fill: var(--accent-color);
 }
 
 .like-icon:active {
@@ -44,14 +50,31 @@
   transition: fill var(--like-active-speed) linear;
 }
 
-.like-icon.is-liked {
+.like-icon.is-liked .heart {
+  animation: like-zoom var(--like-duration) var(--like-delay) ease-in forwards;
+}
+
+.like-icon.is-liked .core {
   fill: var(--accent-color);
-  animation: like-zoom var(--like-duration) var(--like-delay) ease-in forwards,
-    like-sparks var(--like-duration) var(--like-sparks-delay) ease-in forwards;
-  transition: fill 0.3s linear;
+  transition: fill 0.3s 0.1s ease;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s 0.16s ease;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--accent-color);
+  transition: fill 0.3s 0.22s ease;
 }
 
 .like-icon.is-liked .sparks {
+  opacity: 1;
   animation: like-sparks var(--like-duration) var(--like-sparks-delay) ease-in
     forwards;
+}
+
+.like-icon:not(.is-liked) .contour {
+  transition: fill 0.1s linear;
 }

@@ -1,14 +1,12 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-
 :root {
   --font-main: "Inter-Variable", sans-serif;
   --font-accent: "PressStart2P", sans-serif;
 
   --background-color: #ffffff;
-  --main-color: #000000; /* основной цвет (границы, текст) */
-  --button-text-color: #ffffff; /* цвет текста на кнопках */
-  --accent-color: #fb0808; /* цвет сердца при лайке и искр */
-  --text-color: var(--main-color); /* цвет сердца при наведении */
+  --main-color: #000000;
+  --button-text-color: #ffffff;
+  --accent-color: #fb0808;
+  --text-color: var(--main-color);
 
   --grid-color: #d3d3d3;
   --bg-light: #e7e7e7;
@@ -66,7 +64,6 @@
   --filter-saturate: saturate(155%);
   --filter-sepia: sepia(75%);
   --filter-contrast: contrast(145%);
-
   --filter-effects: blur(0.1rem) opacity(0.1) brightness(101%) grayscale(0.5)
-    saturate(115%) sepia(50%) contrast(111%); /* множественный фильтр для тестов Github */
+    saturate(115%) sepia(50%) contrast(111%);
 }
