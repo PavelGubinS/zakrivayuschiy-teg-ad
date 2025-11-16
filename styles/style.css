@@ -189,11 +189,6 @@
   z-index: 0;
 }
 
-.card__icon-button:focus-within::before {
-  opacity: 100;
-  z-index: 0;
-}
-
 .button__container {
   background: var(--background-color);
 }

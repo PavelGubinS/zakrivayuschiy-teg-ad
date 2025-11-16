@@ -2,7 +2,7 @@
 @font-face {
   font-display: swap; /* подгрузка резервного шрифта перед основным  */
   font-family: "Inter-Variable"; /* вариативный шрфит */
-  font-weight: var(--font-weight-content) var(--font-weight-title);
+  font-weight: 400 785;
 
   src: local("Inter-Variable");
   src: url("Inter-Variable.woff2") format("woff2-variations");
