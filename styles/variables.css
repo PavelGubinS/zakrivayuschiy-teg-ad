@@ -1,29 +1,75 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
+  /* Шрифты */
   --font-main: "Inter-Variable", sans-serif;
   --font-accent: "PressStart2P", sans-serif;
 
+  /* Цвета */
   --background-color: #ffffff;
   --main-color: #000000; /* основной цвет (границы, текст) */
   --button-text-color: #ffffff; /* цвет текста на кнопках */
-  --animation-color: #fb0808; /* цвет анимаций  */
+  --accent-color: #fb0808; /* цвет сердца при лайке и искр */
+  --text-color: var(--main-color); /* цвет сердца при наведении */
+
+  /* Фоны */
+  --grid-color: #d3d3d3;
+  --bg-light: #e7e7e7;
+  --bg-dark: #1a1a1a;
   --background: repeating-linear-gradient(
       0deg,
-      #d3d3d3 0px,
-      #d3d3d3 1px,
+      var(--grid-color) 0px,
+      var(--grid-color) 1px,
       transparent 1px,
       transparent 2px
     ),
     repeating-linear-gradient(
       90deg,
-      #d3d3d3 0px,
-      #d3d3d3 1px,
+      var(--grid-color) 0px,
+      var(--grid-color) 1px,
       transparent 1px,
       transparent 2px
     ),
-    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%); /* градиентная сетка */
+    linear-gradient(180deg, var(--bg-light) 0.01%, var(--bg-dark) 100%);
 
-  --accent-color: var(--animation-color); /* цвет сердца при лайке и искр */
-  --text-color: var(--main-color); /* цвет сердца при наведении */
+  --font-weight-content: 400;
+  --font-weight-title: 785;
+
+  --like-duration: 0.3s;
+  --like-delay: 0.1s;
+  --like-sparks-delay: 0.3s;
+  --like-transition-delay: 0.05s;
+  --like-active-speed: 0.1s;
+
+  --page-width: 700px;
+  --min-page-width: 310px;
+  --header-height: 368px;
+  --icon-button-min-height: 38px;
+  --like-button-width: 130px;
+  --like-button-height: 38px;
+  --like-button-padding: 9px 17px;
+  --footer-button-height: 55px;
+  --footer-button-padding: 15px 20px;
+
+  --page-margin: 100px;
+  --header-gap: 23px;
+  --header-bottom-margin: 99px;
+  --post-gap: 50px;
+  --post-title-padding: 5px 10px;
+  --post-content-padding: 25px;
+  --post-content-padding-bottom: 22px;
+  --post-buttons-gap: 7px;
+  --post-buttons-padding-bottom: 3px;
+  --main-footer-justify: center;
+
+  --filter-blur: blur(0.15rem);
+  --filter-opacity: opacity(0.7);
+  --filter-brightness: brightness(120%);
+  --filter-grayscale: grayscale(0.75);
+  --filter-saturate: saturate(155%);
+  --filter-sepia: sepia(75%);
+  --filter-contrast: contrast(145%);
+
+  --filter-effects: blur(0.1rem) opacity(0.1) brightness(101%) grayscale(0.5)
+    saturate(115%) sepia(50%) contrast(111%);
 }

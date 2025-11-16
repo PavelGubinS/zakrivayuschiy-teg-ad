@@ -4,11 +4,11 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
 @keyframes like-zoom {
   0% {
     scale: 1;
@@ -31,29 +31,27 @@
 }
 
 .like-icon {
-  fill: var(--text-color); /* По умолчанию — чёрное сердце */
-  transition: fill 0.3s 0.05s linear;
+  fill: var(--text-color);
+  transition: fill 0.3s var(--like-transition-delay) linear;
 }
 
 .like-icon:hover {
-  fill: var(--text-color); /* При наведении — остаётся чёрным */
+  fill: var(--text-color);
 }
 
 .like-icon:active {
-  fill: var(
-    --accent-color
-  ); /* При нажатии — быстро становится красным + рамка */
-  transition: fill 0.1s linear; /* быстро */
+  fill: var(--accent-color);
+  transition: fill var(--like-active-speed) linear;
 }
 
 .like-icon.is-liked {
   fill: var(--accent-color);
-  animation: like-zoom 0.3s 0.1s ease-in forwards,
-    like-sparks 0.3s 0.3s ease-in forwards; /* После лайка — красное, с анимацией */
+  animation: like-zoom var(--like-duration) var(--like-delay) ease-in forwards,
+    like-sparks var(--like-duration) var(--like-sparks-delay) ease-in forwards;
   transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .sparks {
-  /* Анимация искр */
-  animation: like-sparks 0.3s 0.3s ease-in forwards;
+  animation: like-sparks var(--like-duration) var(--like-sparks-delay) ease-in
+    forwards;
 }
