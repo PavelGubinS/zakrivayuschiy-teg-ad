@@ -199,6 +199,11 @@
   cursor: pointer;
 }
 
+.button:hover,
+.button:focus {
+  box-shadow: 2px 2px 0px 0px var(--main-color);
+}
+
 .card__like-button,
 .footer__button {
   position: relative;
@@ -314,7 +319,6 @@ dialog::backdrop {
   color: var(--main-color);
 }
 
-/* Фильтры изображений */
 .image_blur {
   filter: var(--filter-blur);
 }
@@ -371,6 +375,7 @@ dialog::backdrop {
   }
 
   dialog[open] {
+    /* работает, если диалоговое окно открыто */
     display: flex;
     flex-direction: column;
     justify-content: center;
