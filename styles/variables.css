@@ -58,7 +58,7 @@
   --main-footer-justify: center;
 
   --filter-blur: blur(0.15rem);
-  --filter-opacity: opacity(0.7);
+  --filter-opacity: opacity(0.2);
   --filter-brightness: brightness(120%);
   --filter-grayscale: grayscale(0.75);
   --filter-saturate: saturate(155%);
