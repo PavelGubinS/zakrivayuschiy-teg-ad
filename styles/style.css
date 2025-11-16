@@ -28,17 +28,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--header-gap);
-  margin-bottom: var(--header-bottom-margin);
-  border: 2px solid var(--main-color);
-  padding: 0;
+  gap: var(--header-gap); /* отступ между заголовком и текстом */
+  margin-bottom: var(--header-bottom-margin); /* отступ под заголовком */
+  border: 2px solid var(--main-color); /* рамка заголовка */
+  padding: 0; /* убираем отступы у заголовка */
   font-family: var(--font-accent);
   background-color: var(--background-color);
   width: var(--page-width);
   height: var(--header-height);
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  position: relative; /* абсолютное позиционирование */
 }
 
 .header__logo {
@@ -134,8 +134,9 @@
 }
 
 .post__buttons {
+  /* для расположения кнопок */
   display: flex;
-  justify-content: end;
+  justify-content: end; /* выравнивание по правому краю */
   gap: var(--post-buttons-gap);
   padding-bottom: var(--post-buttons-padding-bottom);
 }
@@ -172,7 +173,8 @@
 }
 
 .card__icon-button:active::before {
-  opacity: 1;
+  /* пока кнопка нажата и перед содержимым кнопки */
+  opacity: 1; /* полная непрозрачность */
 }
 
 .button {
@@ -200,9 +202,9 @@
 
 .card__like-button::before,
 .footer__button::before {
-  content: "";
+  content: ""; /* пустой контен - для before и after, без этого анимация фона не сработает */
   position: absolute;
-  top: 0;
+  top: 0; /* отступ от верхнего края  по верхнему краю кнопки */
   left: -100%;
   width: 100%;
   height: 100%;
@@ -248,6 +250,7 @@
 }
 
 dialog::backdrop {
+  /* для затемнения фона позади dialog с дискетой */
   opacity: 0.75;
   background: var(--main-color);
 }
@@ -317,6 +320,7 @@ dialog::backdrop {
 }
 
 .image_effects {
+  /* для мультифильтра по заданию */
   filter: var(--filter-effects);
 }
 
