@@ -16,6 +16,6 @@
   --accent-color: var(--animation-color); /* цвет сердца при лайке и искр */
   --text-color: var(--main-color);        /* цвет сердца при наведении */
 
-  --font-weight-title: 790;
-  --font-weight-content: 470;
+  --font-weight-title: 785;
+  --font-weight-content: 400;
 }
