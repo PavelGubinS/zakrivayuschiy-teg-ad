@@ -166,7 +166,7 @@
   width: 100%;
   height: 100%;
   outline: 2px solid var(--main-color);
-  outline-offset: -2px;
+  outline-offset: -2px; /* отступ от границы внутри кнопки, а не снаружи */
   opacity: 0; /* полная прозрачность */
   transition: opacity 0.3s ease;
 }
@@ -200,7 +200,6 @@
 
 .card__like-button::before,
 .footer__button::before {
-  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -328,7 +327,7 @@ dialog::backdrop {
 }
 
 @media (width <= 375px) {
-  /* для мобилок, здесь не все ошибки смог поправить */
+  /* адаптив для мобилок, здесь не все ошибки смог поправить */
   .page {
     width: 100%;
     min-width: var(--min-page-width);
@@ -356,18 +355,18 @@ dialog::backdrop {
   .main {
     width: 100%;
     padding: 0 10px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* ограничение краёв для гибкости, отступы входят в общий размер */
   }
 
   .post {
     width: 100%;
     max-width: none;
-    box-sizing: border-box;
+    box-sizing: border-box; /* ограничение краёв для гибкости, отступы входят в общий размер */
     margin: 0 auto;
   }
 
   .post__cover {
-    /* для правки схлопнувшейся карточки, с бабушкой */
+    /* для правки схлопнувшейся карточки, возникли проблемы с ChtoTakoe.jpeg */
     position: relative;
     border-top: 2px solid var(--main-color);
     border-bottom: 2px solid var(--main-color);
