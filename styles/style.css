@@ -147,7 +147,6 @@
 }
 
 .card__icon-button::before {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -155,14 +154,12 @@
   height: 100%;
   outline: 2px solid var(--main-color);
   outline-offset: -2px;
-  opacity: 0;
+  opacity: 0; /* Полная прозрачность */
   transition: opacity 0.3s ease;
-  z-index: -1;
 }
 
 .card__icon-button:active::before {
   opacity: 100;
-  z-index: 0;
 }
 
 .button {
@@ -197,7 +194,6 @@
   width: 100%;
   height: 100%;
   background-color: var(--main-color);
-  z-index: 1;
   transition: left 0.5s ease-in-out;
 }
 
