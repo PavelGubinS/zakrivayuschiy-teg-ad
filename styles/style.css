@@ -328,10 +328,27 @@ dialog::backdrop {
 }
 
 @media (width <= 375px) {
-  /* вёрска для мобильных устройств, по заданию */
   .page {
     width: 100%;
     min-width: var(--min-page-width);
+  }
+
+  .header {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .header__title {
+    font-size: 2.2rem;
+    word-break: break-all;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .header__description {
+    font-size: 1rem;
+    text-align: center;
   }
 
   .dialog {
@@ -344,13 +361,11 @@ dialog::backdrop {
   }
 
   .footer__button svg {
-    /* для svg, если не влезает при мобильной вёрстке */
     width: 21px;
     height: 21px;
   }
 
-  dialog[open] {
-    /* использую, когда окрыто окно с дискетой */
+  dialog[open] {  
     display: flex;
     flex-direction: column;
     justify-content: center;
