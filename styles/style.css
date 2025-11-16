@@ -188,6 +188,8 @@
   z-index: 0;
 }
 
+/* === КНОПКИ: основной стиль и hover-эффекты === */
+
 .button {
   position: relative;
   display: flex;
@@ -199,10 +201,13 @@
   cursor: pointer;
 }
 
+/* Тень при наведении: малая, чёткая */
 .button:hover,
 .button:focus {
   box-shadow: 2px 2px 0px 0px var(--main-color);
 }
+
+/* === Кнопка Like и футерная кнопка: заливка фона при ховере === */
 
 .card__like-button,
 .footer__button {
@@ -211,6 +216,7 @@
   z-index: 1;
 }
 
+/* Фоновая заливка: появляется слева направо */
 .card__like-button::before,
 .footer__button::before {
   content: "";
@@ -231,6 +237,7 @@
   left: 0;
 }
 
+/* Размеры кнопки Like */
 .card__like-button {
   width: var(--like-button-width);
   min-height: var(--like-button-height);
@@ -240,8 +247,8 @@
   cursor: pointer;
 }
 
-.card__like-button .button__text,
-.footer__button .button__text {
+/* Текст на кнопках: чёрный по умолчанию */
+.button__text {
   position: relative;
   z-index: 2;
   color: var(--main-color);
@@ -249,32 +256,28 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
-  transition: color 0.5s ease-in-out;
+  transition: color 0.3s ease;
 }
 
+/* При ховере: текст становится белым */
 .card__like-button:hover .button__text,
 .card__like-button:focus .button__text,
 .footer__button:hover .button__text,
 .footer__button:focus .button__text {
-  color: var(--button-text-color);
+  color: var(--button-text-color); /* Белый */
 }
 
-.button__text {
-  font-family: var(--font-accent);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 90%;
-  color: var(--button-text-color);
-}
-
+/* Иконки: меняют цвет при ховере */
 .button svg {
-  transition: color 0.5s ease-in-out;
+  transition: color 0.3s ease;
 }
 
 .button:hover svg,
 .button:focus svg {
   color: var(--button-text-color);
 }
+
+/* === Диалоговое окно === */
 
 dialog::backdrop {
   opacity: 0.75;
@@ -319,6 +322,8 @@ dialog::backdrop {
   color: var(--main-color);
 }
 
+/* === Фильтры изображений === */
+
 .image_blur {
   filter: var(--filter-blur);
 }
@@ -347,12 +352,16 @@ dialog::backdrop {
   filter: var(--filter-effects);
 }
 
+/* === Кнопка в футере === */
+
 .footer__button {
   gap: 8px;
   min-height: var(--footer-button-height);
   padding: var(--footer-button-padding);
   overflow: hidden;
 }
+
+/* === Адаптив === */
 
 @media (width <= 375px) {
   .page {
@@ -375,7 +384,6 @@ dialog::backdrop {
   }
 
   dialog[open] {
-    /* работает, если диалоговое окно открыто */
     display: flex;
     flex-direction: column;
     justify-content: center;
