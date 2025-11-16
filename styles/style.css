@@ -95,7 +95,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain; 
+  object-fit: contain;
   object-position: center;
   aspect-ratio: 1 / 1;
 }
@@ -110,20 +110,19 @@
   font-weight: 400;
   font-size: 14px;
   text-align: right;
-  text-shadow: 
-    1px  1px 0 var(--watermark-stroke-color),
-    -1px  1px 0 var(--watermark-stroke-color),
-     1px -1px 0 var(--watermark-stroke-color),
+  text-shadow: 1px 1px 0 var(--watermark-stroke-color),
+    -1px 1px 0 var(--watermark-stroke-color),
+    1px -1px 0 var(--watermark-stroke-color),
     -1px -1px 0 var(--watermark-stroke-color);
   pointer-events: none;
   z-index: 2;
 }
 
 @supports (
-  (-webkit-text-stroke: 1px var(--watermark-stroke-color)) or
-  (text-stroke: 1px var(--watermark-stroke-color))
-) and (mix-blend-mode: hard-light)
-{
+    (-webkit-text-stroke: 1px var(--watermark-stroke-color)) or
+      (text-stroke: 1px var(--watermark-stroke-color))
+  )
+  and (mix-blend-mode: hard-light) {
   .post__cover__watermark {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--watermark-stroke-color);
@@ -324,7 +323,7 @@ dialog::backdrop {
   min-height: 38px;
   padding: 10px 16px;
   gap: 10px;
-  width: 100%; 
+  width: 100%;
 }
 
 .dialog__button .button__text {
@@ -336,7 +335,7 @@ dialog::backdrop {
 }
 
 .image_opacity {
-  filter: opacity(0.70);
+  filter: opacity(0.7);
 }
 
 .image_brightness {
@@ -359,12 +358,11 @@ dialog::backdrop {
   filter: contrast(145%);
 }
 
-
 .footer__button {
   gap: 8px;
   min-height: 55px;
   padding: 15px 20px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .footer__button .button__text {
