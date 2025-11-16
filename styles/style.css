@@ -172,7 +172,7 @@
 }
 
 .card__icon-button:active::before {
-  opacity: 1;    
+  opacity: 1;
 }
 
 .button {
