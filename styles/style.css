@@ -367,11 +367,7 @@ dialog::backdrop {
   }
 
   .post__cover {
-    /* для правки схлопнувшейся карточки, возникли проблемы с ChtoTakoe.jpeg */
-    position: relative;
-    border-top: 2px solid var(--main-color);
-    border-bottom: 2px solid var(--main-color);
-    min-height: 150px;
+    min-height: 150px; /* минимальная высота для картинки, чтобы не схлопнулась */
   }
 
   .post__cover__image {
@@ -384,7 +380,13 @@ dialog::backdrop {
   }
 
   .dialog {
-    padding: 30px 40px;
+    width: calc(100vw * (352 / 1440));
+    border: 2px solid var(--main-color);
+    padding: 30px;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer__button {
@@ -395,13 +397,5 @@ dialog::backdrop {
   .footer__button svg {
     width: 23px;
     height: 23px;
-  }
-
-  dialog[open] {
-    /* диалоговое окно */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
