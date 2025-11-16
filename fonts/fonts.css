@@ -5,8 +5,8 @@
   font-weight: 400 785;
 
   src: local("Inter-Variable");
-  src: url("Inter-Variable.woff2") format("woff2-variations");
-  src: url("Inter-Variable.woff2") format("woff2 supports variations");
+  src: url("Inter-Variable.woff2") format("woff2-variations")
+    format("woff2 supports variations");
 }
 
 @font-face {

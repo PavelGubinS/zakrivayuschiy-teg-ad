@@ -208,7 +208,6 @@
 
 .card__like-button::before,
 .footer__button::before {
-  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -246,8 +245,7 @@
   transition: color 0.3s ease;
 }
 
-.card__like-button:hover .button__text,
-.card__like-button:focus .button__text {
+.card__like-button:hover .button__text {
   color: var(--background-color);
 }
 
@@ -277,12 +275,11 @@
 
 dialog::backdrop {
   opacity: 0.75;
-  background: var(--main-color, #000);
+  background: var(--main-color);
 }
 
 .dialog {
   width: calc(100vw * (352 / 1440));
-  min-width: 341px;
   border: 2px solid var(--main-color);
   padding: 30px;
   background: var(--background-color);
@@ -316,7 +313,7 @@ dialog::backdrop {
 }
 
 .dialog__button .button__text {
-  color: var(--main-color) !important;
+  color: var(--main-color);
 }
 
 .image_blur {
