@@ -109,6 +109,18 @@
   text-shadow: 1px 1px 0 var(--watermark-stroke-color, currentColor);
 }
 
+@supports (
+    /* проверка поддержки для водяного знака */
+      (-webkit-text-stroke: 1px var(--watermark-stroke-color)) or
+      (text-stroke: 1px var(--watermark-stroke-color))
+  )
+  and (mix-blend-mode: hard-light) {
+  .post__cover__watermark {
+    text-shadow: none;
+    mix-blend-mode: hard-light;
+  }
+}
+
 .post__content {
   display: flex;
   flex-direction: column;
@@ -154,7 +166,7 @@
   height: 100%;
   outline: 2px solid var(--main-color);
   outline-offset: -2px;
-  opacity: 0; /* Полная прозрачность */
+  opacity: 0; /* полная прозрачность */
   transition: opacity 0.3s ease;
 }
 
@@ -211,7 +223,6 @@
 
 .button__text {
   position: relative;
-  z-index: 2;
   color: var(--main-color);
   font-family: var(--font-accent);
   font-weight: 400;
@@ -329,8 +340,8 @@ dialog::backdrop {
   }
 
   .footer__button svg {
-    width: 28px;
-    height: 28px;
+    width: 21px;
+    height: 21px;
   }
 
   dialog[open] {
