@@ -166,13 +166,13 @@
   width: 100%;
   height: 100%;
   outline: 2px solid var(--main-color);
-  outline-offset: -2px; /* отступ от границы внутри кнопки, а не снаружи */
+  outline-offset: -2px; /* отступ не снаружи, а внутри при - */
   opacity: 0; /* полная прозрачность */
   transition: opacity 0.3s ease;
 }
 
 .card__icon-button:active::before {
-  opacity: 100;
+  opacity: 1;    
 }
 
 .button {
@@ -200,6 +200,7 @@
 
 .card__like-button::before,
 .footer__button::before {
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
