@@ -1,1 +1,21 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --font-main: "Inter-Variable", sans-serif;
+  --font-accent: "PressStart2P", sans-serif;
+
+  --background-color: #ffffff;
+  --main-color: #000000;                  /* основной цвет (границы, текст) */
+  --button-text-color: #ffffff;          /* цвет текста на кнопках */
+  --animation-color: #fb0808;            /* цвет анимаций  */  
+  --background: 
+    repeating-linear-gradient(0deg, #d3d3d3 0px, #d3d3d3 1px, transparent 1px, transparent 2px),
+    repeating-linear-gradient(90deg, #d3d3d3 0px, #d3d3d3 1px, transparent 1px, transparent 2px),
+    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);     /* градиентная сетка */    
+
+  --accent-color: var(--animation-color); /* цвет сердца при лайке и искр */
+  --text-color: var(--main-color);        /* цвет сердца при наведении */
+
+  --font-weight-title: 790;
+  --font-weight-content: 470;
+}
