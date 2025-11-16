@@ -2,9 +2,9 @@
   --font-main: "Inter-Variable", sans-serif;
   --font-accent: "PressStart2P", sans-serif;
 
-  --background-color: #ffffff;
   --main-color: #000000;
   --button-text-color: #ffffff;
+  --background-color: #ffffff;
   --accent-color: #fb0808;
   --text-color: var(--main-color);
 

@@ -22,14 +22,12 @@
 }
 
 .like-icon {
-  /* Исходное состояние */
   fill: var(--text-color);
   transition: fill 0.3s var(--like-transition-delay) linear;
 }
 
 .like-icon .core,
 .like-icon .main-body {
-  /* Элементы внутри сердца */
   transition: fill 0.3s ease;
 }
 
@@ -39,19 +37,17 @@
 
 .like-icon:hover .core,
 .like-icon:hover .main-body {
-  /* Hover: заливка ЧЁРНЫМ при наведении */
   fill: var(--main-color);
 }
 
 .like-icon:active .core,
 .like-icon:active .main-body {
-  /* Active: при нажатии — всё равно ЧЁРНЫЙ */
   fill: var(--main-color);
 }
 
-.like-icon.is-liked .heart {
-  /* is-liked: при клике — КРАСНЫЙ (анимация лайка) */
-  animation: like-zoom var(--like-duration) var(--like-delay) ease-in forwards;
+.like-icon.is-liked {
+  animation: like-zoom var(--like-duration) var(--like-delay) ease-in;
+  transform-origin: center;
 }
 
 .like-icon.is-liked .core {
@@ -71,12 +67,16 @@
 
 .like-icon.is-liked .sparks {
   opacity: 1;
-  animation: like-sparks var(--like-duration) var(--like-sparks-delay) ease-in
-    forwards;
+  animation: like-sparks var(--like-duration) var(--like-sparks-delay) ease-in;
 }
 
 .like-icon:not(.is-liked) .contour {
-  /* Возврат контура к чёрному при снятии лайка */
   fill: var(--main-color);
   transition: fill 0.1s linear;
+}
+
+.like-icon .sparks {
+  opacity: 0;
+  fill: transparent;
+  transition: opacity 0.1s linear, fill 0.1s linear;
 }
