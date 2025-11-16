@@ -381,8 +381,7 @@ dialog::backdrop {
   }
 
   .dialog {
-    width: calc(100vw * (352 / 1440));
-    border: 2px solid var(--main-color);
+    width: calc(100vw * (352 / 1440)); /* примерно четверть экрана */
     padding: 30px;
     background: var(--background-color);
     display: flex;
