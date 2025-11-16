@@ -110,11 +110,12 @@
 }
 
 @supports (
-    /* проверка поддержки для водяного знака */
+    /* проверка поддержки для водяного знака, для браузеров */
       (-webkit-text-stroke: 1px var(--watermark-stroke-color)) or
       (text-stroke: 1px var(--watermark-stroke-color))
   )
   and (mix-blend-mode: hard-light) {
+  /* текст смешивается с фоном(в теории) */
   .post__cover__watermark {
     text-shadow: none;
     mix-blend-mode: hard-light;
@@ -211,7 +212,7 @@
 
 .card__like-button:hover::before,
 .footer__button:hover::before {
-  left: 0;
+  left: 0; /* для лайка - фон полностью заезжает, под запуск анимации фона */
 }
 
 .card__like-button {
@@ -252,7 +253,7 @@ dialog::backdrop {
 }
 
 .dialog {
-  width: calc(100vw * (352 / 1440));
+  width: calc(100vw * (352 / 1440)); /* рамка диалогового окна */
   border: 2px solid var(--main-color);
   padding: 30px;
   background: var(--background-color);
@@ -266,6 +267,7 @@ dialog::backdrop {
 }
 
 .dialog__warning {
+  /* для текста в диалоговом окне для шрифта */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -286,6 +288,7 @@ dialog::backdrop {
 }
 
 .dialog__button .button__text {
+  /* для текста в кнопке OK */
   color: var(--main-color);
 }
 
@@ -325,6 +328,7 @@ dialog::backdrop {
 }
 
 @media (width <= 375px) {
+  /* вёрска для мобильных устройств, по заданию */
   .page {
     width: 100%;
     min-width: var(--min-page-width);
@@ -340,11 +344,13 @@ dialog::backdrop {
   }
 
   .footer__button svg {
+    /* для svg, если не влезает при мобильной вёрстке */
     width: 21px;
     height: 21px;
   }
 
   dialog[open] {
+    /* использую, когда окрыто окно с дискетой */
     display: flex;
     flex-direction: column;
     justify-content: center;
