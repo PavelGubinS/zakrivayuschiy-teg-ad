@@ -338,7 +338,6 @@ dialog::backdrop {
   .header {
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
   }
 
   .header__title {
@@ -356,13 +355,11 @@ dialog::backdrop {
   .main {
     width: 100%;
     padding: 0 10px;
-    box-sizing: border-box; /* ограничение краёв для гибкости, отступы входят в общий размер */
   }
 
   .post {
     width: 100%;
     max-width: none;
-    box-sizing: border-box; /* ограничение краёв для гибкости, отступы входят в общий размер */
     margin: 0 auto;
   }
 
