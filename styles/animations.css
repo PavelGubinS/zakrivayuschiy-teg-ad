@@ -11,9 +11,8 @@
 }
 
 @keyframes like-sparks {
-  /* вспышка */
   from {
-    opacity: 0;
+    opacity: 0; /* полностью прозрачная вспышка */
     fill: transparent;
   }
   to {

@@ -12,7 +12,7 @@
   --bg-light: #e7e7e7;
   --bg-dark: #1a1a1a;
   --background: repeating-linear-gradient(
-      0deg,
+      /* для сетки заднего фона, вертикаль и горизонталь */ 0deg,
       var(--grid-color) 0px,
       var(--grid-color) 1px,
       transparent 1px,
@@ -65,5 +65,5 @@
   --filter-sepia: sepia(75%);
   --filter-contrast: contrast(145%);
   --filter-effects: blur(0.1rem) opacity(0.8) brightness(101%) grayscale(0.5)
-    saturate(115%) sepia(50%) contrast(111%);
+    saturate(115%) sepia(50%) contrast(111%); /* мультифильтр под отдельный тест */
 }
