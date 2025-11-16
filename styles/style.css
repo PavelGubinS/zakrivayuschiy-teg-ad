@@ -54,8 +54,6 @@
 .header__title {
   font-size: clamp(3.0624rem, 2.7103rem + 1.5023vw, 4.0626rem);
   text-transform: uppercase;
-  margin: 0;
-  z-index: 1;
 }
 
 .header__title:focus {
@@ -96,7 +94,6 @@
   height: 100%;
   object-fit: contain;
   object-position: center;
-  aspect-ratio: 1 / 1;
 }
 
 .post__cover__watermark {
@@ -109,25 +106,7 @@
   font-weight: 400;
   font-size: 14px;
   text-align: right;
-  text-shadow: 1px 1px 0 var(--watermark-stroke-color, currentColor),
-    -1px 1px 0 var(--watermark-stroke-color, currentColor),
-    1px -1px 0 var(--watermark-stroke-color, currentColor),
-    -1px -1px 0 var(--watermark-stroke-color, currentColor);
-  pointer-events: none;
-  z-index: 2;
-}
-
-@supports (
-    (-webkit-text-stroke: 1px var(--watermark-stroke-color)) or
-      (text-stroke: 1px var(--watermark-stroke-color))
-  )
-  and (mix-blend-mode: hard-light) {
-  .post__cover__watermark {
-    text-shadow: none;
-    -webkit-text-stroke: 1px var(--watermark-stroke-color);
-    text-stroke: 1px var(--watermark-stroke-color);
-    mix-blend-mode: hard-light;
-  }
+  text-shadow: 1px 1px 0 var(--watermark-stroke-color, currentColor);
 }
 
 .post__content {
@@ -159,10 +138,8 @@
   align-items: end;
   min-height: var(--icon-button-min-height);
   border: none;
-  padding: 0;
   background-color: transparent;
   cursor: pointer;
-  z-index: 1;
 }
 
 .card__icon-button:focus {
