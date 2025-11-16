@@ -278,8 +278,6 @@
   color: var(--background-color);
 }
 
-
-
 dialog::backdrop {
   opacity: 0.75;
   background: var(--main-color, #000);
@@ -318,6 +316,10 @@ dialog::backdrop {
   padding: 10px 16px;
   gap: 10px;
   width: 100%; 
+}
+
+.dialog__button .button__text {
+  color: var(--main-color) !important;
 }
 
 .image_blur {
