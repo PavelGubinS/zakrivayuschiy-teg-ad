@@ -327,10 +327,11 @@ dialog::backdrop {
   overflow: hidden;
 }
 
-@media (width <= 375px) {
+@media (width <= 375px) { /* для мобилок, здесь не все ошибки смог поправить */
   .page {
     width: 100%;
     min-width: var(--min-page-width);
+    padding: 0;
   }
 
   .header {
@@ -351,6 +352,19 @@ dialog::backdrop {
     text-align: center;
   }
 
+  .main {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .post {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
   .dialog {
     padding: 30px 40px;
   }
@@ -360,12 +374,12 @@ dialog::backdrop {
     gap: 8px;
   }
 
-  .footer__button svg {
-    width: 21px;
-    height: 21px;
+  .footer__button svg {   
+    width: 23px;
+    height: 23px;
   }
 
-  dialog[open] {  
+  dialog[open] {  /* диалоговое окно */
     display: flex;
     flex-direction: column;
     justify-content: center;
