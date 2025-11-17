@@ -11,16 +11,16 @@
 
 .page {
   background: var(--background);
-  background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-size: cover;
   width: var(--page-width);
   min-width: var(--min-page-width);
   max-width: 100%;
   margin: var(--page-margin) auto;
   color: var(--main-color);
-  font-size: var(--font-size);
   font-family: var(--font-main);
+  font-size: var(--font-size);
   font-variation-settings: "wght" var(--font-weight-content);
 }
 
@@ -167,7 +167,7 @@
   top: 0;
   left: 0;
   outline: 2px solid var(--main-color);
-  outline-offset: -2px; /* отступ не снаружи, а внутри при - */
+  outline-offset: -3px; /* отступ не снаружи, а внутри при - */
   opacity: 0; /* полная прозрачность */
   transition: opacity 0.3s ease;
 }
@@ -196,8 +196,8 @@
 .card__like-button,
 .footer__button {
   background-color: var(--background-color);
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .card__like-button::before,
