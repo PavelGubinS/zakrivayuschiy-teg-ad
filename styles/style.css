@@ -110,9 +110,8 @@
 }
 
 @supports (
-    /* проверка поддержки для водяного знака, для браузеров */
-      (-webkit-text-stroke: 1px var(--watermark-stroke-color)) or
-      (text-stroke: 1px var(--watermark-stroke-color))
+    /* проверка поддержки для водяного знака, для браузеров с разными движками, вебкит работает сейчас */
+      (-webkit-text-stroke: 1px var(--watermark-stroke-color))
   )
   and (mix-blend-mode: hard-light) {
   /* текст смешивается с фоном(в теории) */
@@ -153,7 +152,7 @@
   min-height: var(--icon-button-min-height);
   border: none;
   background-color: transparent;
-  cursor: pointer;
+  cursor: pointer; /* курсор при наведении на кнопку меняется на руку */
 }
 
 .card__icon-button:focus {
@@ -214,7 +213,7 @@
 
 .card__like-button:hover::before,
 .footer__button:hover::before {
-  left: 0; /* для лайка - фон полностью заезжает, под запуск анимации фона */
+  left: 0; /* слева фон, который заезжает */
 }
 
 .card__like-button {
