@@ -10,16 +10,17 @@
 */
 
 .page {
+  background: var(--background);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   width: var(--page-width);
   min-width: var(--min-page-width);
   max-width: 100%;
   margin: var(--page-margin) auto;
   color: var(--main-color);
+  font-size: var(--font-size);
   font-family: var(--font-main);
-  background: var(--background);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   font-variation-settings: "wght" var(--font-weight-content);
 }
 
@@ -44,8 +45,8 @@
 .header__logo {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   width: 100%;
   height: 100%;
@@ -61,7 +62,7 @@
 }
 
 .header__description {
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4374rem);
   text-transform: uppercase;
 }
 
@@ -72,13 +73,13 @@
 }
 
 .post {
-  border: 2px solid var(--main-color);
+  border: 3px solid var(--main-color);
   background-color: var(--background-color);
 }
 
 .post__title {
   padding: var(--post-title-padding);
-  font-size: 18px;
+  font-size: 19px;
   font-variation-settings: "wght" var(--font-weight-title);
 }
 
@@ -89,9 +90,9 @@
 }
 
 .post__cover__image {
-  display: block;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: contain;
   object-position: center;
 }
@@ -100,7 +101,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  opacity: 0.8;
+  opacity: 0.85;
   color: var(--main-color);
   font-family: var(--font-accent);
   font-weight: 400;
@@ -114,21 +115,21 @@
       (-webkit-text-stroke: 1px var(--watermark-stroke-color))
   )
   and (mix-blend-mode: hard-light) {
-  /* текст смешивается с фоном(в теории) */
+  /* текст смешивается с фоном(если поддерживет) */
   .post__cover__watermark {
-    text-shadow: none;
     mix-blend-mode: hard-light;
+    text-shadow: none;
   }
 }
 
 .post__content {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 27px;
   padding: var(--post-content-padding);
   padding-bottom: var(--post-content-padding-bottom);
   font-size: 18px;
-  line-height: 21px;
+  line-height: 22px;
   font-variation-settings: "wght" var(--font-weight-content);
 }
 
@@ -141,8 +142,8 @@
 }
 
 .main__footer {
-  display: flex;
   justify-content: var(--main-footer-justify);
+  display: flex;
 }
 
 .card__icon-button {
@@ -160,11 +161,11 @@
 }
 
 .card__icon-button::before {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   outline: 2px solid var(--main-color);
   outline-offset: -2px; /* отступ не снаружи, а внутри при - */
   opacity: 0; /* полная прозрачность */
@@ -194,9 +195,9 @@
 
 .card__like-button,
 .footer__button {
+  background-color: var(--background-color);
   position: relative;
   overflow: hidden;
-  background-color: var(--background-color);
 }
 
 .card__like-button::before,
@@ -319,7 +320,7 @@ dialog::backdrop {
 }
 
 .image_effects {
-  /* для мультифильтра по заданию */
+  /* для мультифильтра по заданию, нужен под отдельный тест */
   filter: var(--filter-effects);
 }
 
